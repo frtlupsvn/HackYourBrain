@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D017FF4F1AB95BCE00AD47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */; };
+		D017FF511AB95BCE00AD47DE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D017FF501AB95BCE00AD47DE /* GameScene.sks */; };
+		D017FF531AB95BCE00AD47DE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF521AB95BCE00AD47DE /* GameScene.swift */; };
+		D017FF551AB95BCE00AD47DE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF541AB95BCE00AD47DE /* GameViewController.swift */; };
+		D017FF581AB95BCE00AD47DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D017FF561AB95BCE00AD47DE /* Main.storyboard */; };
+		D017FF5A1AB95BCE00AD47DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D017FF591AB95BCE00AD47DE /* Images.xcassets */; };
+		D017FF5D1AB95BCE00AD47DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D017FF5B1AB95BCE00AD47DE /* LaunchScreen.xib */; };
+		D017FF691AB95BCE00AD47DE /* Hack_Your_BrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF681AB95BCE00AD47DE /* Hack_Your_BrainTests.swift */; };
+		D017FF741AB965AD00AD47DE /* cubic.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF731AB965AD00AD47DE /* cubic.png */; };
+		D017FF791AB96BEA00AD47DE /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF751AB96BEA00AD47DE /* yellow.png */; };
+		D017FF7A1AB96BEA00AD47DE /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF761AB96BEA00AD47DE /* blue.png */; };
+		D017FF7B1AB96BEA00AD47DE /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF771AB96BEA00AD47DE /* green.png */; };
+		D017FF7C1AB96BEA00AD47DE /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF781AB96BEA00AD47DE /* red.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D017FF631AB95BCE00AD47DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D017FF411AB95BCE00AD47DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D017FF481AB95BCE00AD47DE;
+			remoteInfo = "Hack Your Brain";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D017FF491AB95BCE00AD47DE /* Hack Your Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hack Your Brain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D017FF4D1AB95BCE00AD47DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D017FF501AB95BCE00AD47DE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D017FF521AB95BCE00AD47DE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		D017FF541AB95BCE00AD47DE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		D017FF571AB95BCE00AD47DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D017FF591AB95BCE00AD47DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D017FF5C1AB95BCE00AD47DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D017FF621AB95BCE00AD47DE /* Hack Your BrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hack Your BrainTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D017FF671AB95BCE00AD47DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D017FF681AB95BCE00AD47DE /* Hack_Your_BrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hack_Your_BrainTests.swift; sourceTree = "<group>"; };
+		D017FF731AB965AD00AD47DE /* cubic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cubic.png; sourceTree = "<group>"; };
+		D017FF751AB96BEA00AD47DE /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		D017FF761AB96BEA00AD47DE /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		D017FF771AB96BEA00AD47DE /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		D017FF781AB96BEA00AD47DE /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D017FF461AB95BCE00AD47DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D017FF5F1AB95BCE00AD47DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D017FF401AB95BCD00AD47DE = {
+			isa = PBXGroup;
+			children = (
+				D017FF4B1AB95BCE00AD47DE /* Hack Your Brain */,
+				D017FF651AB95BCE00AD47DE /* Hack Your BrainTests */,
+				D017FF4A1AB95BCE00AD47DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D017FF4A1AB95BCE00AD47DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF491AB95BCE00AD47DE /* Hack Your Brain.app */,
+				D017FF621AB95BCE00AD47DE /* Hack Your BrainTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D017FF4B1AB95BCE00AD47DE /* Hack Your Brain */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF721AB965A500AD47DE /* images */,
+				D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */,
+				D017FF501AB95BCE00AD47DE /* GameScene.sks */,
+				D017FF521AB95BCE00AD47DE /* GameScene.swift */,
+				D017FF541AB95BCE00AD47DE /* GameViewController.swift */,
+				D017FF561AB95BCE00AD47DE /* Main.storyboard */,
+				D017FF591AB95BCE00AD47DE /* Images.xcassets */,
+				D017FF5B1AB95BCE00AD47DE /* LaunchScreen.xib */,
+				D017FF4C1AB95BCE00AD47DE /* Supporting Files */,
+			);
+			path = "Hack Your Brain";
+			sourceTree = "<group>";
+		};
+		D017FF4C1AB95BCE00AD47DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF4D1AB95BCE00AD47DE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D017FF651AB95BCE00AD47DE /* Hack Your BrainTests */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF681AB95BCE00AD47DE /* Hack_Your_BrainTests.swift */,
+				D017FF661AB95BCE00AD47DE /* Supporting Files */,
+			);
+			path = "Hack Your BrainTests";
+			sourceTree = "<group>";
+		};
+		D017FF661AB95BCE00AD47DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF671AB95BCE00AD47DE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D017FF721AB965A500AD47DE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D017FF751AB96BEA00AD47DE /* yellow.png */,
+				D017FF761AB96BEA00AD47DE /* blue.png */,
+				D017FF771AB96BEA00AD47DE /* green.png */,
+				D017FF781AB96BEA00AD47DE /* red.png */,
+				D017FF731AB965AD00AD47DE /* cubic.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D017FF481AB95BCE00AD47DE /* Hack Your Brain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D017FF6C1AB95BCE00AD47DE /* Build configuration list for PBXNativeTarget "Hack Your Brain" */;
+			buildPhases = (
+				D017FF451AB95BCE00AD47DE /* Sources */,
+				D017FF461AB95BCE00AD47DE /* Frameworks */,
+				D017FF471AB95BCE00AD47DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hack Your Brain";
+			productName = "Hack Your Brain";
+			productReference = D017FF491AB95BCE00AD47DE /* Hack Your Brain.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D017FF611AB95BCE00AD47DE /* Hack Your BrainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D017FF6F1AB95BCE00AD47DE /* Build configuration list for PBXNativeTarget "Hack Your BrainTests" */;
+			buildPhases = (
+				D017FF5E1AB95BCE00AD47DE /* Sources */,
+				D017FF5F1AB95BCE00AD47DE /* Frameworks */,
+				D017FF601AB95BCE00AD47DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D017FF641AB95BCE00AD47DE /* PBXTargetDependency */,
+			);
+			name = "Hack Your BrainTests";
+			productName = "Hack Your BrainTests";
+			productReference = D017FF621AB95BCE00AD47DE /* Hack Your BrainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D017FF411AB95BCE00AD47DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = ZoomStudio;
+				TargetAttributes = {
+					D017FF481AB95BCE00AD47DE = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TY52BPKFCE;
+					};
+					D017FF611AB95BCE00AD47DE = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = D017FF481AB95BCE00AD47DE;
+					};
+				};
+			};
+			buildConfigurationList = D017FF441AB95BCE00AD47DE /* Build configuration list for PBXProject "Hack Your Brain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D017FF401AB95BCD00AD47DE;
+			productRefGroup = D017FF4A1AB95BCE00AD47DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D017FF481AB95BCE00AD47DE /* Hack Your Brain */,
+				D017FF611AB95BCE00AD47DE /* Hack Your BrainTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D017FF471AB95BCE00AD47DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D017FF5D1AB95BCE00AD47DE /* LaunchScreen.xib in Resources */,
+				D017FF791AB96BEA00AD47DE /* yellow.png in Resources */,
+				D017FF5A1AB95BCE00AD47DE /* Images.xcassets in Resources */,
+				D017FF7C1AB96BEA00AD47DE /* red.png in Resources */,
+				D017FF741AB965AD00AD47DE /* cubic.png in Resources */,
+				D017FF511AB95BCE00AD47DE /* GameScene.sks in Resources */,
+				D017FF7B1AB96BEA00AD47DE /* green.png in Resources */,
+				D017FF7A1AB96BEA00AD47DE /* blue.png in Resources */,
+				D017FF581AB95BCE00AD47DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D017FF601AB95BCE00AD47DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D017FF451AB95BCE00AD47DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D017FF531AB95BCE00AD47DE /* GameScene.swift in Sources */,
+				D017FF551AB95BCE00AD47DE /* GameViewController.swift in Sources */,
+				D017FF4F1AB95BCE00AD47DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D017FF5E1AB95BCE00AD47DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D017FF691AB95BCE00AD47DE /* Hack_Your_BrainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D017FF641AB95BCE00AD47DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D017FF481AB95BCE00AD47DE /* Hack Your Brain */;
+			targetProxy = D017FF631AB95BCE00AD47DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D017FF561AB95BCE00AD47DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D017FF571AB95BCE00AD47DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D017FF5B1AB95BCE00AD47DE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D017FF5C1AB95BCE00AD47DE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D017FF6A1AB95BCE00AD47DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D017FF6B1AB95BCE00AD47DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D017FF6D1AB95BCE00AD47DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Hack Your Brain/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D017FF6E1AB95BCE00AD47DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Hack Your Brain/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D017FF701AB95BCE00AD47DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hack Your BrainTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hack Your Brain.app/Hack Your Brain";
+			};
+			name = Debug;
+		};
+		D017FF711AB95BCE00AD47DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Hack Your BrainTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hack Your Brain.app/Hack Your Brain";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D017FF441AB95BCE00AD47DE /* Build configuration list for PBXProject "Hack Your Brain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D017FF6A1AB95BCE00AD47DE /* Debug */,
+				D017FF6B1AB95BCE00AD47DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D017FF6C1AB95BCE00AD47DE /* Build configuration list for PBXNativeTarget "Hack Your Brain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D017FF6D1AB95BCE00AD47DE /* Debug */,
+				D017FF6E1AB95BCE00AD47DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D017FF6F1AB95BCE00AD47DE /* Build configuration list for PBXNativeTarget "Hack Your BrainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D017FF701AB95BCE00AD47DE /* Debug */,
+				D017FF711AB95BCE00AD47DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D017FF411AB95BCE00AD47DE /* Project object */;
+}
