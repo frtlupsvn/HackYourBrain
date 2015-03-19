@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2616AA56-D29B-47C7-8BF0-C7571191CD5A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Hack Your Brain</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>955446CD4AADBD631500B75A342E9E5058EC62ED</key>
+		<string>https://github.com/frtlupsvn/HackYourBrain.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Hack Your Brain.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>955446CD4AADBD631500B75A342E9E5058EC62ED</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/frtlupsvn/HackYourBrain.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>955446CD4AADBD631500B75A342E9E5058EC62ED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>955446CD4AADBD631500B75A342E9E5058EC62ED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HackYourBrain</string>
+		</dict>
+	</array>
+</dict>
+</plist>
