@@ -22,6 +22,7 @@
 		D017FF7C1AB96BEA00AD47DE /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = D017FF781AB96BEA00AD47DE /* red.png */; };
 		D06631011ABA849200DEE7EF /* bgSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D06631001ABA849200DEE7EF /* bgSound.mp3 */; };
 		D06631121ABA8CE600DEE7EF /* brain.png in Resources */ = {isa = PBXBuildFile; fileRef = D06631111ABA8CE600DEE7EF /* brain.png */; };
+		D06717CC1ABAD33200D39367 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06717CB1ABAD33200D39367 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D017FF781AB96BEA00AD47DE /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		D06631001ABA849200DEE7EF /* bgSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgSound.mp3; sourceTree = "<group>"; };
 		D06631111ABA8CE600DEE7EF /* brain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brain.png; sourceTree = "<group>"; };
+		D06717CB1ABAD33200D39367 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06717CC1ABAD33200D39367 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		D017FF401AB95BCD00AD47DE = {
 			isa = PBXGroup;
 			children = (
+				D06717CB1ABAD33200D39367 /* iAd.framework */,
 				D017FF4B1AB95BCE00AD47DE /* Hack Your Brain */,
 				D017FF651AB95BCE00AD47DE /* Hack Your BrainTests */,
 				D017FF4A1AB95BCE00AD47DE /* Products */,
@@ -398,7 +402,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2de546d9-1454-4118-88da-26549b565ddd";
+				PROVISIONING_PROFILE = "9f534fc1-5d2b-4c0c-aef7-49862a26cb0a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -413,7 +417,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2de546d9-1454-4118-88da-26549b565ddd";
+				PROVISIONING_PROFILE = "9f534fc1-5d2b-4c0c-aef7-49862a26cb0a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

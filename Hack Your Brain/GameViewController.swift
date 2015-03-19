@@ -8,7 +8,7 @@
 
 import UIKit
 import SpriteKit
-
+import iAd
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
@@ -25,8 +25,10 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
-
+class GameViewController: UIViewController,  ADBannerViewDelegate {
+    
+    var theBanner = ADBannerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +37,7 @@ class GameViewController: UIViewController {
             let skView = self.view as SKView
             skView.showsFPS = false
             skView.showsNodeCount = false
+            skView.multipleTouchEnabled = true
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -43,7 +46,15 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             
             skView.presentScene(scene)
+            showThisBanner()
         }
+    }
+    
+    func showThisBanner(){
+        theBanner = ADBannerView(frame: CGRectZero)
+        theBanner.autoresizingMask = UIViewAutoresizing.FlexibleWidth
+        
+        self.view.addSubview(theBanner)
     }
 
     override func shouldAutorotate() -> Bool {

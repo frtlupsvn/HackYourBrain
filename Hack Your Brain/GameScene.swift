@@ -7,9 +7,11 @@
 //
 
 import SpriteKit
-import AVFoundation
+//import AVFoundation
+import UIKit
 
-class GameScene: SKScene {
+
+class GameScene: SKScene  {
     
     var myLabel = SKLabelNode()
     var myScore = SKLabelNode()
@@ -27,22 +29,22 @@ class GameScene: SKScene {
     var ballYellowTexture = SKTexture(imageNamed: "yellow.png")
     var ballRedTexture = SKTexture(imageNamed: "red.png")
     
-    var player = AVAudioPlayer()
+//    var player = AVAudioPlayer()
+    
 
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
-        
         //Sound
 
         // init Audio Player
-        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bgSound", ofType: "mp3")!)
-        // Removed deprecated use of AVAudioSessionDelegate protocol
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-        var error:NSError?
-        player = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        player.prepareToPlay()
+//        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bgSound", ofType: "mp3")!)
+//        // Removed deprecated use of AVAudioSessionDelegate protocol
+//        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+//        AVAudioSession.sharedInstance().setActive(true, error: nil)
+//        
+//        var error:NSError?
+//        player = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+//        player.prepareToPlay()
         
         
         
@@ -57,7 +59,7 @@ class GameScene: SKScene {
         myHighestScore.fontSize = 30;
         
         println(CGRectGetMidX(self.frame))
-        myHighestScore.position = CGPoint(x: CGRectGetMidX(self.frame) - 100 , y: self.frame.height - 40)
+        myHighestScore.position = CGPoint(x: CGRectGetMidX(self.frame) - 100 , y: self.frame.height - 100)
         if (NSUserDefaults.standardUserDefaults().objectForKey("highestScore") != nil) {
             myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int )
         }else {
@@ -86,7 +88,7 @@ class GameScene: SKScene {
         scoreValue  = 0
         cubicValue  = 1 // Meen yellow color
         speedGame   = 2
-        self.player.currentTime = 0
+//        self.player.currentTime = 0
         myLabel.removeFromParent()
         myCubic.removeFromParent()
         
@@ -112,7 +114,7 @@ class GameScene: SKScene {
         myScore.color = SKColor.redColor()
         myScore.colorBlendFactor = 1
         myScore.fontSize = 80;
-        myScore.position = CGPoint(x:CGRectGetMidX(self.frame)-100, y:(CGRectGetMidY(self.frame)+200));
+        myScore.position = CGPoint(x:CGRectGetMidX(self.frame) - 150, y:(CGRectGetMidY(self.frame)) + 100 );
         self.addChild(myScore)
     }
     func writeSomeThing(text:NSString){
@@ -140,7 +142,7 @@ class GameScene: SKScene {
     
     
     func gameStart(){
-        player.play()
+//        player.play()
         myLabel.removeFromParent()
         ballValue = randomBallValue(1, max: 4)
         
@@ -184,10 +186,10 @@ class GameScene: SKScene {
                     NSUserDefaults.standardUserDefaults().synchronize()
                     self.myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int)
                     self.writeSomeThing("New Record !")
-                    self.player.stop()
+//                    self.player.stop()
                 }else {
                     self.writeSomeThing("You Lose !")
-                    self.player.stop()
+//                    self.player.stop()
                 }
                 
                 var countdown = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("resetGame"), userInfo: nil, repeats: false)
