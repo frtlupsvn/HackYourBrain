@@ -58,14 +58,14 @@ class GameScene: SKScene  {
         myHighestScore.colorBlendFactor = 1
         myHighestScore.fontSize = 30;
         
-        println(CGRectGetMidX(self.frame))
+        print(CGRectGetMidX(self.frame))
         myHighestScore.position = CGPoint(x: CGRectGetMidX(self.frame) - 100 , y: self.frame.height - 100)
         if (NSUserDefaults.standardUserDefaults().objectForKey("highestScore") != nil) {
-            myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int )
+            myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int )
         }else {
             NSUserDefaults.standardUserDefaults().setObject(0, forKey: "highestScore")
             NSUserDefaults.standardUserDefaults().synchronize()
-            myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int )
+            myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int )
         }
         self.addChild(myHighestScore)
         
@@ -96,7 +96,7 @@ class GameScene: SKScene  {
         
         writeSomeThing("Let's Go !")
         
-        var cubicTexture =  SKTexture (imageNamed: "cubic.png")
+        let cubicTexture =  SKTexture (imageNamed: "cubic.png")
         myCubic = SKSpriteNode(texture: cubicTexture)
         myCubic.size = CGSizeMake (self.frame.width / 4,self.frame.width / 4)
         myCubic.position = CGPoint(x: CGRectGetMidX(self.frame) , y: (CGRectGetMidY(self.frame) - 200))
@@ -110,7 +110,7 @@ class GameScene: SKScene  {
     func writeScore(text:NSString){
         
         myScore = SKLabelNode(fontNamed:"Chalkduster")
-        myScore.text = text
+        myScore.text = text as String
         myScore.color = SKColor.redColor()
         myScore.colorBlendFactor = 1
         myScore.fontSize = 80;
@@ -119,7 +119,7 @@ class GameScene: SKScene  {
     }
     func writeSomeThing(text:NSString){
         myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = text
+        myLabel.text = text as String
         myLabel.color = SKColor.blackColor()
         myLabel.colorBlendFactor = 1
         myLabel.fontSize = 40;
@@ -181,10 +181,10 @@ class GameScene: SKScene  {
             } else {
                 
                 
-                if (self.scoreValue > NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int){
+                if (self.scoreValue > NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int){
                     NSUserDefaults.standardUserDefaults().setObject(self.scoreValue, forKey: "highestScore")
                     NSUserDefaults.standardUserDefaults().synchronize()
-                    self.myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as Int)
+                    self.myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int)
                     self.writeSomeThing("New Record !")
 //                    self.player.stop()
                 }else {
@@ -207,7 +207,7 @@ class GameScene: SKScene  {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
         for touch: AnyObject in touches {
@@ -220,11 +220,11 @@ class GameScene: SKScene  {
                 cubicValue = 1
             }
             
-            println(cubicValue)
+            print(cubicValue)
             
         }
     }
-    
+
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
