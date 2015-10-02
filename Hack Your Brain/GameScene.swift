@@ -69,7 +69,7 @@ class GameScene: SKScene  {
         }
         self.addChild(myHighestScore)
         
-        backgroundColor = UIColor.whiteColor()
+//        backgroundColor = UIColor.whiteColor()
         writeScore(String(scoreValue))
         writeSomeThing("Let's Go !")
         
