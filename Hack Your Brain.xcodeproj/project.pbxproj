@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AC267171C00CA310085D58F /* 1-Engage-your-brain-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC267161C00CA310085D58F /* 1-Engage-your-brain-1.png */; };
+		5AC2671A1C00D7890085D58F /* Default-568h@.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC267181C00D7890085D58F /* Default-568h@.png */; };
+		5AC2671B1C00D7890085D58F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC267191C00D7890085D58F /* Default-568h@2x.png */; };
 		D017FF4F1AB95BCE00AD47DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */; };
 		D017FF511AB95BCE00AD47DE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D017FF501AB95BCE00AD47DE /* GameScene.sks */; };
 		D017FF531AB95BCE00AD47DE /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D017FF521AB95BCE00AD47DE /* GameScene.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AC267161C00CA310085D58F /* 1-Engage-your-brain-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-Engage-your-brain-1.png"; sourceTree = "<group>"; };
+		5AC267181C00D7890085D58F /* Default-568h@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@.png"; path = "Images.xcassets/LaunchImage.launchimage/Default-568h@.png"; sourceTree = "<group>"; };
+		5AC267191C00D7890085D58F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Images.xcassets/LaunchImage.launchimage/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D017FF491AB95BCE00AD47DE /* Hack Your Brain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hack Your Brain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D017FF4D1AB95BCE00AD47DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 		D017FF4B1AB95BCE00AD47DE /* Hack Your Brain */ = {
 			isa = PBXGroup;
 			children = (
+				5AC267181C00D7890085D58F /* Default-568h@.png */,
+				5AC267191C00D7890085D58F /* Default-568h@2x.png */,
 				D06630FF1ABA847900DEE7EF /* Sound */,
 				D017FF721AB965A500AD47DE /* images */,
 				D017FF4E1AB95BCE00AD47DE /* AppDelegate.swift */,
@@ -141,6 +149,7 @@
 		D017FF721AB965A500AD47DE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				5AC267161C00CA310085D58F /* 1-Engage-your-brain-1.png */,
 				D06631111ABA8CE600DEE7EF /* brain.png */,
 				D017FF751AB96BEA00AD47DE /* yellow.png */,
 				D017FF761AB96BEA00AD47DE /* blue.png */,
@@ -246,6 +255,9 @@
 				D017FF791AB96BEA00AD47DE /* yellow.png in Resources */,
 				D017FF5A1AB95BCE00AD47DE /* Images.xcassets in Resources */,
 				D017FF7C1AB96BEA00AD47DE /* red.png in Resources */,
+				5AC267171C00CA310085D58F /* 1-Engage-your-brain-1.png in Resources */,
+				5AC2671B1C00D7890085D58F /* Default-568h@2x.png in Resources */,
+				5AC2671A1C00D7890085D58F /* Default-568h@.png in Resources */,
 				D017FF741AB965AD00AD47DE /* cubic.png in Resources */,
 				D017FF511AB95BCE00AD47DE /* GameScene.sks in Resources */,
 				D017FF7B1AB96BEA00AD47DE /* green.png in Resources */,
@@ -398,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Hack Your Brain/Info.plist";
@@ -405,7 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -413,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Hack Your Brain/Info.plist";
@@ -420,7 +434,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -29,37 +29,33 @@ class GameScene: SKScene  {
     var ballYellowTexture = SKTexture(imageNamed: "yellow.png")
     var ballRedTexture = SKTexture(imageNamed: "red.png")
     
-//    var player = AVAudioPlayer()
-    
+    var skyColor:SKColor!
+
+    func playBackgroundMusic () {
+        let playAction = SKAction.playSoundFileNamed("bgSound.mp3", waitForCompletion: false)
+        self.runAction(playAction)
+    }
 
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        //Sound
-
-        // init Audio Player
-//        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("bgSound", ofType: "mp3")!)
-//        // Removed deprecated use of AVAudioSessionDelegate protocol
-//        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-//        AVAudioSession.sharedInstance().setActive(true, error: nil)
-//        
-//        var error:NSError?
-//        player = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-//        player.prepareToPlay()
         
+        self.playBackgroundMusic()
         
+        // setup background color
+        skyColor = SKColor(red: 80.0/255.0, green: 145.0/255.0, blue: 68.0/255.0, alpha: 1.0)
+        self.backgroundColor = skyColor
         
         scoreValue = 0
         cubicValue = 1 // Meen yellow color
         speedGame  = 2
         
         //My Highest Score
-        myHighestScore = SKLabelNode(fontNamed:"Chalkduster")
-        myHighestScore.color = SKColor.blueColor()
-        myHighestScore.colorBlendFactor = 1
-        myHighestScore.fontSize = 30;
+
+        myHighestScore = SKLabelNode(fontNamed:"MarkerFelt-Wide")
+        myHighestScore.position = CGPoint( x: self.frame.midX, y: 3 * self.frame.size.height / 4 )
+        myHighestScore.color = UIColor.blackColor()
+        myHighestScore.zPosition = 100
+
         
-        print(CGRectGetMidX(self.frame))
-        myHighestScore.position = CGPoint(x: CGRectGetMidX(self.frame) - 100 , y: self.frame.height - 100)
         if (NSUserDefaults.standardUserDefaults().objectForKey("highestScore") != nil) {
             myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int )
         }else {
@@ -67,9 +63,9 @@ class GameScene: SKScene  {
             NSUserDefaults.standardUserDefaults().synchronize()
             myHighestScore.text = String(format: "Record: %d",NSUserDefaults.standardUserDefaults().objectForKey("highestScore") as! Int )
         }
+        
         self.addChild(myHighestScore)
         
-//        backgroundColor = UIColor.whiteColor()
         writeScore(String(scoreValue))
         writeSomeThing("Let's Go !")
         
@@ -88,7 +84,7 @@ class GameScene: SKScene  {
         scoreValue  = 0
         cubicValue  = 1 // Meen yellow color
         speedGame   = 2
-//        self.player.currentTime = 0
+        
         myLabel.removeFromParent()
         myCubic.removeFromParent()
         
@@ -104,12 +100,12 @@ class GameScene: SKScene  {
         
         
         
-        var countdown = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("countdown"), userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("countdown"), userInfo: nil, repeats: false)
         
     }
     func writeScore(text:NSString){
         
-        myScore = SKLabelNode(fontNamed:"Chalkduster")
+        myScore = SKLabelNode()
         myScore.text = text as String
         myScore.color = SKColor.redColor()
         myScore.colorBlendFactor = 1
@@ -118,7 +114,7 @@ class GameScene: SKScene  {
         self.addChild(myScore)
     }
     func writeSomeThing(text:NSString){
-        myLabel = SKLabelNode(fontNamed:"Chalkduster")
+        myLabel = SKLabelNode()
         myLabel.text = text as String
         myLabel.color = SKColor.blackColor()
         myLabel.colorBlendFactor = 1
@@ -129,15 +125,15 @@ class GameScene: SKScene  {
     
     func countdown(){
         myLabel.text = "1"
-        var countdown = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("count2"), userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("count2"), userInfo: nil, repeats: false)
     }
     func count2(){
         myLabel.text = "2"
-        var countdown = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("count3"), userInfo: nil, repeats: false)
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("count3"), userInfo: nil, repeats: false)
     }
     func count3(){
         myLabel.text = "3"
-        var countdown = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("gameStart"), userInfo: nil, repeats: false)
+       _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("gameStart"), userInfo: nil, repeats: false)
     }
     
     
@@ -192,7 +188,7 @@ class GameScene: SKScene  {
 //                    self.player.stop()
                 }
                 
-                var countdown = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("resetGame"), userInfo: nil, repeats: false)
+                _ = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("resetGame"), userInfo: nil, repeats: false)
             }
         })
         
@@ -210,7 +206,7 @@ class GameScene: SKScene  {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         
-        for touch: AnyObject in touches {
+        for _: AnyObject in touches {
             
             let action = SKAction.rotateByAngle(CGFloat(M_PI/2), duration:0.2)
             myCubic.runAction(action)
