@@ -1,0 +1,6 @@
+framework module Pods_Hack_Your_Brain {
+  umbrella header "Pods-Hack Your Brain-umbrella.h"
+
+  export *
+  module * { export * }
+}
