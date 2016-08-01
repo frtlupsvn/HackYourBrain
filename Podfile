@@ -6,7 +6,9 @@ target 'Hack Your Brain' do
   use_frameworks!
 
   # Pods for Hack Your Brain
-pod 'Firebase/Core'
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
+
 
   target 'Hack Your BrainTests' do
     inherit! :search_paths
